@@ -1,0 +1,84 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+-bash-4.1$ ./lu.B.x 
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP-C) - LU Benchmark
+
+ Size:  102x 102x 102
+ Iterations:                    250
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  250
+
+ Verification being performed for class B
+ Accuracy setting for epsilon =  1.0000000000000E-08
+ Comparison of RMS-norms of residual
+ FAILURE:  1                  -NAN 3.5532672969983E+03                 NAN
+ FAILURE:  2                  -NAN 2.6214750795311E+02                 NAN
+ FAILURE:  3                  -NAN 8.8333721850952E+02                 NAN
+ FAILURE:  4                  -NAN 7.7812774739425E+02                 NAN
+ FAILURE:  5                  -NAN 7.3087969592545E+03                 NAN
+ Comparison of RMS-norms of solution error
+ FAILURE:  1                  -NAN 1.1401176380213E+02                 NAN
+ FAILURE:  2                  -NAN 8.1098963655422E+00                 NAN
+ FAILURE:  3                  -NAN 2.8480597317698E+01                 NAN
+ FAILURE:  4                  -NAN 2.5905394567833E+01                 NAN
+ FAILURE:  5                  -NAN 2.6054907504857E+02                 NAN
+ Comparison of surface integral
+ FAILURE:                     -NAN 4.7887162703308E+01                 NAN
+ Verification failed
+
+
+ LU Benchmark Completed.
+ Class           =                        B
+ Size            =            102x 102x 102
+ Iterations      =                      250
+ Time in seconds =                   893.50
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   558.28
+ Mop/s/thread    =                   558.28
+ Operation type  =           floating point
+ Verification    =             UNSUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              12 Mar 2013
+
+ Compile options:
+    CC           = mpicc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = -I../common
+    CFLAGS       = -Wall -O3 -mcmodel=medium
+    CLINKFLAGS   = -O3 -mcmodel=medium
+    RAND         = (none)
+
+--------------------------------------
+ Please send all errors/feedbacks to:
+ Center for Manycore Programming
+ cmp@aces.snu.ac.kr
+ http://aces.snu.ac.kr
+--------------------------------------
+
+-bash-4.1$ 
+
+
+
+= Details =
+
+first NAN problem encounteres
+-will try gathering methods to solve this issue

@@ -1,0 +1,11 @@
+#summary Block-Tridiagonal Solver.
+
+= BT Benchmark =
+== Block-Tridiagonal Solver ==
+
+The BT  benchmark solves multiple, independent systems of non diagonally dominant block of tridiagonal equations with a 5 by 5 block size. The benchmark requires square numbers of processors, but they can handle other numbers as well
+
+
+= Details =
+
+Per our initial benchmarks, we found that the most time consuming portion of the code is the `binvcrhs()` function which consumes approximately 29% of the total runtime

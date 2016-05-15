@@ -1,0 +1,27 @@
+*Translation of SP benchmark from OpenMP to MPI* 
+
+The SP benchmark solves three sets of uncoupled scalar pentadiagonal systems of equations in x, y, and z direction. The most time consuming function in SP benchmark is compute_rhs function.
+
+
+*Progress Status* 
+
+- Studied the original code of SP benchmark 
+
+- Changed make.def, sp.c, setup_mpi.c file to work with MPI programming environment
+
+- Modified error.c file by translating OpenMP atomic construct to MPI reduction subroutine. 
+
+- Modified exact rhs.c file and solved NAN (not a number) error
+
+- Changed lower-upper boundaries and added MPI communication in rhs.c file
+
+- Modified remaining files initialize.c, rhs.c, x_solve.c, y_solve.c, ninvr.c , pinvr.c, tzetar.c, and txinvr.c files.
+
+- Successfully verified results on the laptop with 4 number of processors for class 'A' problem size.
+
+    
+*Performance Optimization*
+
+- Removed excessive MPI_Allgather communication subroutines and added MPI_Send - MPI_Recv communication for boundary elements. 
+
+- Tested code on Radon cluster for 4 processors and performance has been improved by 30%.

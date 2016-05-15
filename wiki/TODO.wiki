@@ -1,0 +1,20 @@
+#summary Tasks we need to complete
+#labels Phase-Requirements,Featured
+
+= Introduction =
+
+The work will be divided among group members by application kernel:
+ * BT -> V.V.
+ * LU -> B.K.
+ * SP -> P.N.
+
+
+= Details =
+
+For each kernel, we will first:
+ * ~~Benchmark OMP-Fortran vs OMP-C~~
+ * ~~Determine most expensive functions in each kernel using profiling tools~~
+ * ~~Convert one-dimensional algorithm seen in shared memory version to distributed memory~~
+ * Profile one-dimensional distributed version -- Partially Completed
+ * Tune and optimize
+ * Compare to automatically generated MPI codes
